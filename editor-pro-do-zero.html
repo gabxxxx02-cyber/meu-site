@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor Pro do Zero | Curso de Edição de Vídeo</title>
+  <meta name="description" content="Aprenda edição de vídeo do zero e comece a ganhar dinheiro online em 30 dias. Curso prático para Instagram, TikTok e YouTube com método simples e direto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-black': '#0A0B0D',
+            'brand-purple': '#8B5CF6',
+            'brand-neon': '#00FF88',
+            'brand-gray': '#A7B0B8'
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+            'alt': ['Montserrat', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .digital-bg {
+      background:
+        radial-gradient(1000px 500px at 85% -10%, rgba(139,92,246,0.18), transparent 60%),
+        radial-gradient(800px 400px at -10% 30%, rgba(0,255,136,0.12), transparent 60%),
+        linear-gradient(180deg, #0A0B0D 0%, #0D0F13 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-animated-gradient {
+      position: absolute;
+      inset: -20%;
+      background: radial-gradient(circle at 30% 20%, rgba(139,92,246,0.25), transparent 40%),
+                  radial-gradient(circle at 70% 60%, rgba(0,255,136,0.25), transparent 40%);
+      filter: blur(60px);
+      animation: gradientMove 12s ease-in-out infinite alternate;
+      transform: translateZ(0);
+      will-change: transform;
+    }
+    @keyframes gradientMove {
+      0% { transform: translate(0,0) scale(1); }
+      100% { transform: translate(40px,-30px) scale(1.1); }
+    }
+    .parallax-layer {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(800px 400px at 20% 80%, rgba(139,92,246,0.08), transparent 60%);
+      transform: translateZ(0);
+      pointer-events: none;
+    }
+    .glow {
+      box-shadow: 0 0 24px rgba(0,255,136,0.35), 0 8px 24px rgba(139,92,246,0.25);
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+    .glow:hover {
+      box-shadow: 0 0 36px rgba(0,255,136,0.55), 0 12px 36px rgba(139,92,246,0.35);
+      transform: translateY(-2px);
+    }
+    .card-hover {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px -10px rgba(139,92,246,0.25);
+    }
+    .glass {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .price-pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(0,255,136,0.35); }
+      50% { box-shadow: 0 0 0 12px rgba(0,255,136,0.08); }
+    }
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, #00FF88, #8B5CF6);
+      z-index: 60;
+      transition: width .1s linear;
+    }
+  </style>
+</head>
+<body class="bg-brand-black text-white font-sans overflow-x-hidden">
+  <div id="scroll-progress" class="progress-bar"></div>
+
+  <section class="digital-bg min-h-screen flex items-center pt-24">
+    <div class="hero-animated-gradient"></div>
+    <div class="parallax-layer" id="parallax"></div>
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1 mb-4">
+          <span class="w-2 h-2 rounded-full bg-brand-neon animate-pulse"></span>
+          <span class="text-xs tracking-wider text-white/70">Acesso imediato por apenas R$ 297</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+          Aprenda edição de vídeo do zero e comece a ganhar dinheiro pela internet em 30 dias
+        </h1>
+        <p class="text-white/80 text-lg md:text-xl mb-10 max-w-xl">
+          Mesmo que você nunca tenha editado antes e só tenha um computador simples.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/YOURNUMBER" class="inline-flex items-center gap-3 bg-brand-neon text-black font-bold px-7 py-4 rounded-full glow">
+            <i data-lucide="play" class="text-black"></i>
+            <span>Quero começar agora</span>
+          </a>
+          <a href="#oferta" class="inline-flex items-center gap-3 border border-white/20 text-white hover:bg-white/10 px-7 py-4 rounded-full">
+            <i data-lucide="arrow-right"></i>
+            <span>Ver oferta</span>
+          </a>
+        </div>
+      </div>
+      <div class="relative reveal">
+        <div class="absolute -inset-6 bg-gradient-to-tr from-brand-purple/20 to-brand-neon/20 blur-2xl rounded-3xl"></div>
+        <div class="relative rounded-3xl glass p-8">
+          <div class="grid grid-cols-3 gap-4">
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+              <p class="text-sm text-white/60">Preço</p>
+              <p class="text-xl font-bold"><span class="line-through text-white/40">R$ 497</span> <span class="text-brand-neon">R$ 297</span></p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+              <p class="text-sm text-white/60">Parcelado</p>
+              <p class="text-xl font-bold text-brand-purple">12x de R$ 29,70</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+              <p class="text-sm text-white/60">Acesso</p>
+              <p class="text-xl font-bold">Imediato</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="problema" class="py-20 bg-black/30 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14 reveal">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Dores que te impedem de começar</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-brand-neon to-brand-purple mx-auto mt-6"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover reveal">
+          <i data-lucide="clock" class="text-brand-purple mb-3"></i>
+          <p class="font-semibold">Trabalha muito e ganha pouco</p>
+          <p class="text-white/70 text-sm mt-2">Sem um caminho claro, esforço não vira resultado.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover reveal">
+          <i data-lucide="wallet" class="text-brand-neon mb-3"></i>
+          <p class="font-semibold">Quer renda extra</p>
+          <p class="text-white/70 text-sm mt-2">Edição de vídeo é uma porta rápida para monetizar.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover reveal">
+          <i data-lucide="compass" class="text-brand-purple mb-3"></i>
+          <p class="font-semibold">Não sabe por onde começar no digital</p>
+          <p class="text-white/70 text-sm mt-2">Método passo a passo elimina a confusão inicial.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover reveal">
+          <i data-lucide="eye-off" class="text-brand-neon mb-3"></i>
+          <p class="font-semibold">Acha que precisa aparecer</p>
+          <p class="text-white/70 text-sm mt-2">Você pode vender serviços sem ser influenciador.</p>
+        </div>
+      </div>
+      <p class="text-center text-white/80 mt-10 max-w-3xl mx-auto reveal">
+        Você não precisa aparecer, investir alto ou ter experiência. Só precisa de um método certo.
+      </p>
+    </div>
+  </section>
+
+  <section id="curso" class="py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="text-xs tracking-widest text-brand-neon font-bold uppercase">Curso</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold mt-2">Editor Pro do Zero</h2>
+        <p class="text-white/80 text-lg mt-6">O Editor Pro do Zero é um curso prático que ensina você a editar vídeos para Instagram, TikTok e YouTube e vender seus serviços para criadores e empresas.</p>
+        <p class="text-white/70 mt-4">Aprendizado direto ao ponto, com aulas passo a passo e exercícios práticos para você entrar no mercado rapidamente.</p>
+        <a href="https://wa.me/YOURNUMBER" class="mt-8 inline-flex items-center gap-3 bg-brand-neon text-black font-bold px-6 py-3 rounded-full glow">
+          <i data-lucide="message-square"></i>
+          <span>Quero começar agora</span>
+        </a>
+      </div>
+      <div class="reveal">
+        <div class="rounded-3xl glass p-8">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="p-5 rounded-xl bg-black/30 border border-white/10">
+              <p class="text-sm text-white/60">Aulas</p>
+              <p class="text-2xl font-bold text-brand-purple">Práticas</p>
+            </div>
+            <div class="p-5 rounded-xl bg-black/30 border border-white/10">
+              <p class="text-sm text-white/60">Objetivo</p>
+              <p class="text-2xl font-bold text-brand-neon">Renda</p>
+            </div>
+            <div class="p-5 rounded-xl bg-black/30 border border-white/10">
+              <p class="text-sm text-white/60">Ferramentas</p>
+              <p class="text-2xl font-bold">CapCut & Premiere</p>
+            </div>
+            <div class="p-5 rounded-xl bg-black/30 border border-white/10">
+              <p class="text-sm text-white/60">Mercado</p>
+              <p class="text-2xl font-bold">Clientes reais</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video" class="py-12">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-8 reveal">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Assista à apresentação do curso</h2>
+      </div>
+      <div class="relative rounded-3xl glass p-2 reveal">
+        <div class="relative w-full" style="padding-top:56.25%">
+          <video id="promoVideo" class="absolute inset-0 w-full h-full rounded-2xl object-cover" src="videos/editor-pro.mp4" poster="images/editor-pro-poster.jpg" controls preload="none" playsinline></video>
+          <button id="playOverlay" class="absolute inset-0 flex items-center justify-center">
+            <span class="inline-flex items-center gap-3 bg-brand-neon text-black font-bold px-6 py-3 rounded-full glow">
+              <i data-lucide="play"></i>
+              <span>Assistir vídeo</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="conteudo" class="py-20 bg-black/30 border-y border-white/10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14 reveal">
+        <h2 class="text-3xl md:text-4xl font-extrabold">O que você vai aprender</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl glass card-hover reveal">
+          <i data-lucide="layers" class="text-brand-purple mb-3"></i>
+          <p class="font-semibold">Fundamentos da edição</p>
+          <p class="text-white/70 text-sm mt-2">Cortes, ritmo, transições e narrativa visual.</p>
+        </div>
+        <div class="p-6 rounded-2xl glass card-hover reveal">
+          <i data-lucide="video" class="text-brand-neon mb-3"></i>
+          <p class="font-semibold">Como usar CapCut e Premiere</p>
+          <p class="text-white/70 text-sm mt-2">Ferramentas populares no mercado e atalhos úteis.</p>
+        </div>
+        <div class="p-6 rounded-2xl glass card-hover reveal">
+          <i data-lucide="user-plus" class="text-brand-purple mb-3"></i>
+          <p class="font-semibold">Como conseguir clientes</p>
+          <p class="text-white/70 text-sm mt-2">Estratégias para atrair e fechar projetos.</p>
+        </div>
+        <div class="p-6 rounded-2xl glass card-hover reveal">
+          <i data-lucide="credit-card" class="text-brand-neon mb-3"></i>
+          <p class="font-semibold">Como cobrar pelos seus serviços</p>
+          <p class="text-white/70 text-sm mt-2">Precificação clara e proposta profissional.</p>
+        </div>
+        <div class="p-6 rounded-2xl glass card-hover reveal">
+          <i data-lucide="briefcase" class="text-brand-purple mb-3"></i>
+          <p class="font-semibold">Como montar portfólio</p>
+          <p class="text-white/70 text-sm mt-2">Apresentação efetiva para conquistar confiança.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publico" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14 reveal">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Para quem é o Editor Pro do Zero?</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl glass text-center card-hover reveal">
+          <i data-lucide="sparkles" class="text-brand-purple mx-auto mb-3"></i>
+          <p class="font-semibold">Iniciantes</p>
+        </div>
+        <div class="p-6 rounded-2xl glass text-center card-hover reveal">
+          <i data-lucide="plus-circle" class="text-brand-neon mx-auto mb-3"></i>
+          <p class="font-semibold">Quem quer renda extra</p>
+        </div>
+        <div class="p-6 rounded-2xl glass text-center card-hover reveal">
+          <i data-lucide="laptop" class="text-brand-purple mx-auto mb-3"></i>
+          <p class="font-semibold">Jovens que querem trabalhar online</p>
+        </div>
+        <div class="p-6 rounded-2xl glass text-center card-hover reveal">
+          <i data-lucide="home" class="text-brand-neon mx-auto mb-3"></i>
+          <p class="font-semibold">Pessoas que querem trabalhar de casa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prova" class="py-20 bg-black/30 border-y border-white/10">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Método validado por dezenas de alunos iniciantes</h2>
+        <p class="text-white/80 mt-6">Aulas pensadas para quem está começando do zero, com aplicação prática e resultados reais. O foco é aprender rápido e monetizar.</p>
+      </div>
+      <div class="reveal">
+        <div class="rounded-3xl glass p-8">
+          <div class="grid grid-cols-3 gap-4">
+            <div class="p-4 rounded-xl bg-black/30 border border-white/10 text-center">
+              <p class="text-sm text-white/60">Alunos</p>
+              <p class="text-2xl font-bold text-brand-purple counter" data-target="50">0+</p>
+            </div>
+            <div class="p-4 rounded-xl bg-black/30 border border-white/10 text-center">
+              <p class="text-sm text-white/60">Projetos</p>
+              <p class="text-2xl font-bold text-brand-neon counter" data-target="100">0+</p>
+            </div>
+            <div class="p-4 rounded-xl bg-black/30 border border-white/10 text-center">
+              <p class="text-sm text-white/60">Satisfação</p>
+              <p class="text-2xl font-bold">Alto</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bonus" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14 reveal">
+        <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1 mb-4">
+          <span class="w-2 h-2 rounded-full bg-brand-purple animate-pulse"></span>
+          <span class="text-xs tracking-wider text-white/70">Bônus exclusivos incluídos</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-extrabold">Bônus para acelerar seus resultados</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl glass card-hover reveal">
+          <i data-lucide="globe" class="text-brand-neon mb-3"></i>
+          <p class="font-semibold">Lista de sites para conseguir clientes</p>
+          <p class="text-white/70 text-sm mt-2">Os melhores lugares para prospectar rápido.</p>
+        </div>
+        <div class="p-6 rounded-2xl glass card-hover reveal">
+          <i data-lucide="mail" class="text-brand-purple mb-3"></i>
+          <p class="font-semibold">Modelo de mensagem para fechar contratos</p>
+          <p class="text-white/70 text-sm mt-2">Scripts prontos para conversão.</p>
+        </div>
+        <div class="p-6 rounded-2xl glass card-hover reveal">
+          <i data-lucide="instagram" class="text-brand-neon mb-3"></i>
+          <p class="font-semibold">Aula extra sobre posicionamento no Instagram</p>
+          <p class="text-white/70 text-sm mt-2">Como se destacar e atrair demandas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="oferta" class="py-20 bg-black/30 border-y border-white/10">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-5xl font-extrabold reveal">De R$ 497 por apenas R$ 297</h2>
+      <p class="text-white/80 text-lg mt-3 reveal">Ou 12x de R$ 29,70</p>
+      <p class="text-brand-neon font-semibold mt-4 reveal">Oferta especial de lançamento por tempo limitado</p>
+      <div class="mt-8 inline-block px-6 py-4 rounded-2xl glass price-pulse reveal">
+        <p class="text-xl md:text-2xl font-extrabold"><span class="line-through text-white/40">R$ 497</span> <span class="text-brand-neon">R$ 297</span></p>
+      </div>
+      <a href="https://wa.me/YOURNUMBER" class="mt-10 inline-flex items-center gap-3 bg-brand-neon text-black font-bold px-8 py-4 rounded-full glow reveal">
+        <i data-lucide="shopping-cart"></i>
+        <span>Quero acessar o curso agora</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="garantia" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="rounded-3xl glass p-8 max-w-4xl mx-auto text-center reveal">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <i data-lucide="shield-check" class="text-brand-neon w-8 h-8"></i>
+          <h3 class="text-2xl font-extrabold">Garantia incondicional de 7 dias</h3>
+        </div>
+        <p class="text-white/80">Teste o curso sem risco. Se não gostar, você pode solicitar o reembolso em até 7 dias.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-tr from-brand-purple/20 via-transparent to-brand-neon/20 p-12 text-center reveal">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Está pronto para começar a ganhar dinheiro editando vídeos?</h2>
+        <a href="https://wa.me/YOURNUMBER" class="inline-flex items-center gap-3 bg-brand-neon text-black font-bold px-10 py-5 rounded-full glow">
+          <i data-lucide="zap"></i>
+          <span>Quero me tornar um Editor Pro</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-20 bg-black/30 border-y border-white/10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10 reveal">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Perguntas frequentes</h2>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-4">
+        <details class="rounded-2xl glass p-4 transition-all duration-300 reveal">
+          <summary class="cursor-pointer font-semibold flex items-center justify-between">
+            Preciso de um PC potente?
+            <i data-lucide="chevron-down"></i>
+          </summary>
+          <p class="text-white/70 mt-3">Não. Você pode começar com um computador simples usando CapCut e evoluir conforme avança.</p>
+        </details>
+        <details class="rounded-2xl glass p-4 transition-all duration-300 reveal">
+          <summary class="cursor-pointer font-semibold flex items-center justify-between">
+            O curso é para iniciantes?
+            <i data-lucide="chevron-down"></i>
+          </summary>
+          <p class="text-white/70 mt-3">Sim. Todo conteúdo é pensado para quem está começando e quer monetizar rápido.</p>
+        </details>
+        <details class="rounded-2xl glass p-4 transition-all duration-300 reveal">
+          <summary class="cursor-pointer font-semibold flex items-center justify-between">
+            Como consigo meus primeiros clientes?
+            <i data-lucide="chevron-down"></i>
+          </summary>
+          <p class="text-white/70 mt-3">Você recebe uma lista de sites, modelos de mensagem e estratégias práticas para fechar contratos.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/YOURNUMBER" class="fixed bottom-6 right-6 z-50 bg-brand-neon text-black font-bold px-4 py-4 rounded-full glow inline-flex items-center gap-2">
+    <i data-lucide="play"></i>
+    <span class="hidden sm:inline">Quero começar agora</span>
+  </a>
+
+  <script>
+    lucide.createIcons();
+    const v = document.getElementById('promoVideo');
+    const overlay = document.getElementById('playOverlay');
+    if (v && overlay) {
+      overlay.addEventListener('click', () => {
+        v.play();
+        overlay.style.display = 'none';
+      });
+      v.addEventListener('play', () => {
+        overlay.style.display = 'none';
+      });
+      v.addEventListener('pause', () => {
+        overlay.style.display = '';
+      });
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const counters = document.querySelectorAll('.counter');
+    const animateCounter = (el) => {
+      const target = parseInt(el.getAttribute('data-target'), 10);
+      let current = 0;
+      const step = Math.max(1, Math.round(target / 60));
+      const inc = () => {
+        current += step;
+        if (current >= target) {
+          current = target;
+          el.textContent = target + '+';
+        } else {
+          el.textContent = current + '+';
+          requestAnimationFrame(inc);
+        }
+      };
+      requestAnimationFrame(inc);
+    };
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObserver.observe(c));
+    const progress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (scrollTop / scrollHeight) * 100;
+      progress.style.width = scrolled + '%';
+      const p = document.getElementById('parallax');
+      if (p) {
+        const offset = scrollTop * 0.05;
+        p.style.transform = `translateY(${offset}px)`;
+      }
+    });
+  </script>
+</body>
+</html>

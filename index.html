@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica de Estética Premium | Harmonização Facial e Limpeza de Pele</title>
+    <meta name="description" content="Realce sua beleza natural com resultados exclusivos. Especialista em Harmonização Facial e Limpeza de Pele Premium em um ambiente sofisticado.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'clinic-nude': '#FDF5F2',
+                        'clinic-pink': '#F8D7DA',
+                        'clinic-gold': '#C5A059',
+                        'clinic-gold-light': '#D4AF37',
+                        'clinic-dark': '#4A4A4A',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .premium-shadow {
+            box-shadow: 0 10px 30px -5px rgba(197, 160, 89, 0.1);
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #C5A059 0%, #D4AF37 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.3);
+        }
+        .bg-hero {
+            background-image: linear-gradient(rgba(253, 245, 242, 0.7), rgba(253, 245, 242, 0.7)), url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2087&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .floating-wa {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-clinic-nude font-sans text-clinic-dark overflow-x-hidden">
+
+    <!-- Header / Navbar (Optional but recommended for premium feel) -->
+    <header class="fixed w-full z-50 glass-effect">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-serif font-bold text-clinic-gold tracking-wider uppercase">
+                Aesthetique
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#servicos" class="hover:text-clinic-gold transition">Serviços</a>
+                <a href="#resultados" class="hover:text-clinic-gold transition">Resultados</a>
+                <a href="#sobre" class="hover:text-clinic-gold transition">Sobre</a>
+                <a href="#contato" class="hover:text-clinic-gold transition">Contato</a>
+            </div>
+            <a href="https://wa.me/YOURNUMBER" class="hidden md:block btn-gold text-white px-6 py-2 rounded-full text-sm font-bold tracking-widest uppercase">
+                Agendar
+            </a>
+        </nav>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-20 bg-hero overflow-hidden">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <span class="inline-block text-clinic-gold font-bold tracking-[0.3em] uppercase mb-4 text-sm">Beleza & Sofisticação</span>
+                <h1 class="font-serif text-5xl md:text-7xl mb-6 leading-tight text-gray-800">
+                    Realce sua beleza com <span class="italic text-clinic-gold">resultados naturais</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg">
+                    Tratamentos exclusivos e personalizados para quem busca elegância, segurança e o cuidado que sua pele merece.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/YOURNUMBER" class="btn-gold text-white px-10 py-4 rounded-full font-bold tracking-widest uppercase text-center text-sm">
+                        Agendar via WhatsApp
+                    </a>
+                    <a href="#servicos" class="border-2 border-clinic-gold text-clinic-gold hover:bg-clinic-gold hover:text-white px-10 py-4 rounded-full font-bold tracking-widest uppercase text-center transition duration-300 text-sm">
+                        Ver Tratamentos
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Subtle Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <i data-lucide="chevron-down" class="text-clinic-gold"></i>
+        </div>
+    </section>
+
+    <!-- 2. CREDIBILITY BAR -->
+    <section class="bg-white py-10 border-y border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-8 md:gap-20">
+                <div class="flex items-center space-x-4" data-aos="fade-up">
+                    <div class="bg-clinic-nude p-3 rounded-full">
+                        <i data-lucide="users" class="w-6 h-6 text-clinic-gold"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg leading-none">+100</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-tighter">Clientes Felizes</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-clinic-nude p-3 rounded-full">
+                        <i data-lucide="award" class="w-6 h-6 text-clinic-gold"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg leading-none">Especialista</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-tighter">Em Estética Facial</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-clinic-nude p-3 rounded-full">
+                        <i data-lucide="heart" class="w-6 h-6 text-clinic-gold"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg leading-none">Atendimento</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-tighter">Humanizado & Único</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section id="servicos" class="py-24 bg-clinic-nude">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-clinic-gold font-bold tracking-widest uppercase text-sm">Nossos Cuidados</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-2 text-gray-800">Tratamentos Premium</h2>
+                <div class="w-24 h-1 bg-clinic-gold mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Service 1 -->
+                <div class="bg-white p-10 rounded-3xl premium-shadow group hover:scale-[1.02] transition duration-500" data-aos="fade-up">
+                    <div class="bg-clinic-nude w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-clinic-pink transition duration-500">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-clinic-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 text-gray-800">Harmonização Facial</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Realce suas melhores características com equilíbrio e naturalidade através de técnicas avançadas.
+                    </p>
+                    <a href="https://wa.me/YOURNUMBER" class="text-clinic-gold font-bold text-sm uppercase tracking-widest flex items-center hover:translate-x-2 transition duration-300">
+                        Saber mais <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-10 rounded-3xl premium-shadow group hover:scale-[1.02] transition duration-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-clinic-nude w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-clinic-pink transition duration-500">
+                        <i data-lucide="droplets" class="w-8 h-8 text-clinic-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 text-gray-800">Limpeza de Pele Premium</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Desintoxicação profunda e hidratação intensa para uma pele renovada, luminosa e saudável.
+                    </p>
+                    <a href="https://wa.me/YOURNUMBER" class="text-clinic-gold font-bold text-sm uppercase tracking-widest flex items-center hover:translate-x-2 transition duration-300">
+                        Saber mais <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-10 rounded-3xl premium-shadow group hover:scale-[1.02] transition duration-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-clinic-nude w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-clinic-pink transition duration-500">
+                        <i data-lucide="zap" class="w-8 h-8 text-clinic-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 text-gray-800">Bioestimuladores</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Recupere a firmeza e o colágeno da sua pele com tratamentos de rejuvenescimento de alta tecnologia.
+                    </p>
+                    <a href="https://wa.me/YOURNUMBER" class="text-clinic-gold font-bold text-sm uppercase tracking-widest flex items-center hover:translate-x-2 transition duration-300">
+                        Saber mais <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BENEFITS SECTION -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop" alt="Cuidados com a pele" class="rounded-[3rem] premium-shadow">
+                </div>
+                <div data-aos="fade-left">
+                    <span class="text-clinic-gold font-bold tracking-widest uppercase text-sm">Por que nos escolher</span>
+                    <h2 class="font-serif text-4xl md:text-5xl mt-2 mb-8 text-gray-800 leading-tight">Sua melhor versão começa aqui</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="mt-1 bg-clinic-nude p-1 rounded-full">
+                                <i data-lucide="check" class="w-4 h-4 text-clinic-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Autoestima Renovada</h4>
+                                <p class="text-gray-600">Sinta-se confiante e radiante todos os dias.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="mt-1 bg-clinic-nude p-1 rounded-full">
+                                <i data-lucide="check" class="w-4 h-4 text-clinic-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Pele Saudável e Viçosa</h4>
+                                <p class="text-gray-600">Tratamentos que cuidam da saúde de dentro para fora.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="mt-1 bg-clinic-nude p-1 rounded-full">
+                                <i data-lucide="check" class="w-4 h-4 text-clinic-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Segurança em Primeiro Lugar</h4>
+                                <p class="text-gray-600">Protocolos modernos e produtos de alta qualidade.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="mt-1 bg-clinic-nude p-1 rounded-full">
+                                <i data-lucide="check" class="w-4 h-4 text-clinic-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Resultados Naturais</h4>
+                                <p class="text-gray-600">Beleza sem exageros, respeitando sua identidade.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SOCIAL PROOF – BEFORE & AFTER -->
+    <section id="resultados" class="py-24 bg-clinic-nude overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-20" data-aos="fade-up">
+                <span class="text-clinic-gold font-bold tracking-widest uppercase text-sm">Transformações</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-2 text-gray-800">Resultados Reais de Clientes Reais</h2>
+                <div class="w-24 h-1 bg-clinic-gold mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="relative group overflow-hidden rounded-3xl aspect-square premium-shadow" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <span class="text-white font-bold tracking-widest uppercase border-2 border-white px-6 py-2">Ver Detalhes</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-3xl aspect-square premium-shadow" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <span class="text-white font-bold tracking-widest uppercase border-2 border-white px-6 py-2">Ver Detalhes</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-3xl aspect-square premium-shadow" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop" class="object-cover w-full h-full transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+                        <span class="text-white font-bold tracking-widest uppercase border-2 border-white px-6 py-2">Ver Detalhes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TESTIMONIALS SECTION -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-clinic-gold font-bold tracking-widest uppercase text-sm">Depoimentos</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-2 text-gray-800">O que nossas clientes dizem</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-clinic-nude p-8 rounded-3xl relative" data-aos="fade-up">
+                    <div class="flex mb-4 text-clinic-gold">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Fiz a harmonização e amei! O resultado foi super natural, exatamente como eu queria. A doutora é maravilhosa e muito atenciosa."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                            <img src="https://i.pravatar.cc/150?u=1" alt="Cliente">
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">Mariana Silva</p>
+                            <p class="text-xs text-gray-500 uppercase tracking-tighter">Empresária</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-clinic-nude p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex mb-4 text-clinic-gold">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"A limpeza de pele premium é de outro mundo. Minha pele nunca esteve tão hidratada e iluminada. Vale cada centavo!"</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                            <img src="https://i.pravatar.cc/150?u=2" alt="Cliente">
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">Juliana Costa</p>
+                            <p class="text-xs text-gray-500 uppercase tracking-tighter">Advogada</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-clinic-nude p-8 rounded-3xl relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex mb-4 text-clinic-gold">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Ambiente impecável e atendimento de primeira. Me senti muito segura durante todo o procedimento. Recomendo muito!"</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                            <img src="https://i.pravatar.cc/150?u=3" alt="Cliente">
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">Fernanda Lima</p>
+                            <p class="text-xs text-gray-500 uppercase tracking-tighter">Arquiteta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ABOUT THE SPECIALIST -->
+    <section id="sobre" class="py-24 bg-clinic-nude">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1" data-aos="fade-right">
+                    <span class="text-clinic-gold font-bold tracking-widest uppercase text-sm">A Especialista</span>
+                    <h2 class="font-serif text-4xl md:text-5xl mt-2 mb-6 text-gray-800">Dra. Isabella Santos</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                        Com mais de 8 anos de experiência em estética avançada, a Dra. Isabella é referência em procedimentos que priorizam a naturalidade e a saúde da pele.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Formada e especializada nas melhores instituições do país, sua filosofia de trabalho baseia-se no atendimento humanizado, onde cada detalhe é planejado para elevar a autoestima de forma elegante e segura.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-10">
+                        <div class="border-l-2 border-clinic-gold pl-4">
+                            <p class="font-bold text-xl">+2000</p>
+                            <p class="text-xs text-gray-500 uppercase">Procedimentos</p>
+                        </div>
+                        <div class="border-l-2 border-clinic-gold pl-4">
+                            <p class="font-bold text-xl">12</p>
+                            <p class="text-xs text-gray-500 uppercase">Certificações</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/YOURNUMBER" class="btn-gold text-white px-8 py-3 rounded-full font-bold tracking-widest uppercase inline-block text-sm">
+                        Agendar com a Dra.
+                    </a>
+                </div>
+                <div class="order-1 md:order-2" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="absolute -inset-4 border-2 border-clinic-gold rounded-[3rem] -z-10 translate-x-4 translate-y-4"></div>
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop" alt="Especialista" class="rounded-[3rem] premium-shadow w-full grayscale-[20%] hover:grayscale-0 transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. MAIN CONVERSION CTA -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="bg-clinic-dark rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden premium-shadow" data-aos="zoom-in">
+                <!-- Background Decoration -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-clinic-gold opacity-10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-clinic-gold opacity-10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="font-serif text-4xl md:text-6xl mb-8">Pronta para realçar sua beleza natural?</h2>
+                    <p class="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+                        Reserve agora sua avaliação personalizada e descubra o tratamento ideal para você.
+                    </p>
+                    <a href="https://wa.me/YOURNUMBER" class="btn-gold text-white px-12 py-5 rounded-full font-bold tracking-widest uppercase text-lg inline-block">
+                        Quero Agendar Agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. LOCATION SECTION -->
+    <section id="contato" class="py-24 bg-clinic-nude">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-up">
+                    <span class="text-clinic-gold font-bold tracking-widest uppercase text-sm">Onde Estamos</span>
+                    <h2 class="font-serif text-4xl md:text-5xl mt-2 mb-8 text-gray-800">Um ambiente exclusivo esperando por você</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white p-3 rounded-full shadow-sm">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-clinic-gold"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800">Endereço</p>
+                                <p class="text-gray-600">Av. Paulista, 1000 - Sala 12 - São Paulo, SP</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white p-3 rounded-full shadow-sm">
+                                <i data-lucide="clock" class="w-6 h-6 text-clinic-gold"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800">Horário de Atendimento</p>
+                                <p class="text-gray-600">Segunda à Sexta: 09h às 19h | Sábado: 09h às 13h</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white p-3 rounded-full shadow-sm">
+                                <i data-lucide="phone" class="w-6 h-6 text-clinic-gold"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800">WhatsApp</p>
+                                <p class="text-gray-600">(11) 99999-9999</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="rounded-[3rem] overflow-hidden premium-shadow h-96 bg-gray-200 relative">
+                        <!-- Map Placeholder -->
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-400 flex-col">
+                            <i data-lucide="map" class="w-12 h-12 mb-4"></i>
+                            <p class="font-medium">Mapa Interativo será carregado aqui</p>
+                        </div>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.19750580993!2d-46.65867142377626!3d-23.56134916129486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. PREMIUM FOOTER -->
+    <footer class="bg-white pt-20 pb-10 border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="text-2xl font-serif font-bold text-clinic-gold tracking-wider uppercase mb-6">
+                        Aesthetique
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Especialista em realçar sua beleza natural com sofisticação e segurança. Seu bem-estar é nossa prioridade.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-6 uppercase tracking-widest text-sm">Procedimentos</h4>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-clinic-gold transition">Harmonização Facial</a></li>
+                        <li><a href="#" class="hover:text-clinic-gold transition">Limpeza de Pele Premium</a></li>
+                        <li><a href="#" class="hover:text-clinic-gold transition">Bioestimuladores de Colágeno</a></li>
+                        <li><a href="#" class="hover:text-clinic-gold transition">Preenchimento Labial</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-6 uppercase tracking-widest text-sm">Links Úteis</h4>
+                    <ul class="space-y-4 text-sm text-gray-500">
+                        <li><a href="#sobre" class="hover:text-clinic-gold transition">Sobre Nós</a></li>
+                        <li><a href="#resultados" class="hover:text-clinic-gold transition">Resultados</a></li>
+                        <li><a href="https://wa.me/YOURNUMBER" class="hover:text-clinic-gold transition">Agendar Consulta</a></li>
+                        <li><a href="#" class="hover:text-clinic-gold transition">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-6 uppercase tracking-widest text-sm">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-clinic-nude p-3 rounded-full hover:bg-clinic-pink transition duration-300">
+                            <i data-lucide="instagram" class="w-5 h-5 text-clinic-gold"></i>
+                        </a>
+                        <a href="#" class="bg-clinic-nude p-3 rounded-full hover:bg-clinic-pink transition duration-300">
+                            <i data-lucide="facebook" class="w-5 h-5 text-clinic-gold"></i>
+                        </a>
+                        <a href="https://wa.me/YOURNUMBER" class="bg-clinic-nude p-3 rounded-full hover:bg-clinic-pink transition duration-300">
+                            <i data-lucide="phone" class="w-5 h-5 text-clinic-gold"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-100 pt-10 text-center text-xs text-gray-400 uppercase tracking-widest">
+                <p>&copy; 2024 Aesthetique Clínica de Estética. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/YOURNUMBER" class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-2xl floating-wa flex items-center justify-center hover:scale-110 transition duration-300 group">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-500 font-bold whitespace-nowrap">Agendar Agora</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('py-2', 'shadow-md');
+                header.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
+</html>

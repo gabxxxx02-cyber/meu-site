@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Ads Pro | Gestor de Tráfego Pago</title>
+  <meta name="description" content="Aumente suas vendas com tráfego pago estratégico. Campanhas profissionais focadas em conversão e geração de clientes via Instagram e Google.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-black': '#0B0F12',
+            'brand-blue': '#00A3FF',
+            'brand-green': '#00FF88',
+            'brand-gray': '#A7B0B8'
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+            'alt': ['Montserrat', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .tech-bg {
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(0,163,255,0.15), transparent 60%),
+        radial-gradient(800px 400px at -10% 20%, rgba(0,255,136,0.12), transparent 60%),
+        linear-gradient(180deg, #0B0F12 0%, #0E1318 100%);
+    }
+    .glow {
+      box-shadow: 0 0 24px rgba(0,255,136,0.35), 0 8px 24px rgba(0,163,255,0.25);
+    }
+    .glow:hover {
+      box-shadow: 0 0 36px rgba(0,255,136,0.55), 0 12px 36px rgba(0,163,255,0.35);
+      transform: translateY(-2px);
+    }
+    .card-hover {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px -10px rgba(0,163,255,0.25);
+    }
+  </style>
+</head>
+<body class="bg-brand-black text-white font-sans overflow-x-hidden">
+
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur border-b border-white/10">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <span class="inline-block w-8 h-8 rounded-full bg-gradient-to-tr from-brand-green to-brand-blue shadow"></span>
+        <span class="font-extrabold tracking-wider text-white">Performance Ads Pro</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8 text-sm">
+        <a href="#problema" class="text-white/70 hover:text-white transition">Problema</a>
+        <a href="#solucao" class="text-white/70 hover:text-white transition">Solução</a>
+        <a href="#beneficios" class="text-white/70 hover:text-white transition">Benefícios</a>
+        <a href="#para-quem" class="text-white/70 hover:text-white transition">Para quem</a>
+        <a href="#oferta" class="text-white/70 hover:text-white transition">Oferta</a>
+      </div>
+      <a href="https://wa.me/YOURNUMBER" class="hidden md:inline-flex items-center gap-2 bg-brand-green text-black font-bold px-5 py-2 rounded-full glow">
+        <i data-lucide="message-square"></i>
+        <span>Quero mais clientes</span>
+      </a>
+    </nav>
+  </header>
+
+  <section class="tech-bg min-h-screen flex items-center pt-24">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div data-aos="fade-up">
+        <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1 mb-4">
+          <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+          <span class="text-xs tracking-wider text-white/70">Vagas limitadas para novos clientes este mês</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+          Aumente suas vendas com <span class="text-brand-green">tráfego pago estratégico</span>
+        </h1>
+        <p class="text-white/80 text-lg md:text-xl mb-10 max-w-lg">
+          Anúncios profissionais no Instagram e Google para gerar leads e vendas todos os dias.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/YOURNUMBER" class="inline-flex items-center gap-3 bg-brand-green text-black font-bold px-7 py-4 rounded-full glow">
+            <i data-lucide="zap" class="text-black"></i>
+            <span>Quero mais clientes</span>
+          </a>
+          <a href="#solucao" class="inline-flex items-center gap-3 border border-white/20 text-white hover:bg-white/10 px-7 py-4 rounded-full">
+            <i data-lucide="arrow-right"></i>
+            <span>Como funciona</span>
+          </a>
+        </div>
+      </div>
+      <div class="relative" data-aos="fade-left">
+        <div class="absolute -inset-6 bg-gradient-to-tr from-brand-blue/20 to-brand-green/20 blur-2xl rounded-3xl"></div>
+        <div class="relative rounded-3xl border border-white/10 bg-black/30 p-8">
+          <div class="grid grid-cols-3 gap-4">
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+              <p class="text-sm text-white/60">ROAS</p>
+              <p class="text-2xl font-bold text-brand-green">+3.5x</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+              <p class="text-sm text-white/60">Campanhas</p>
+              <p class="text-2xl font-bold text-brand-blue">150+</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+              <p class="text-sm text-white/60">Plataformas</p>
+              <p class="text-2xl font-bold"><span class="text-brand-green">Meta</span> & <span class="text-brand-blue">Google</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="problema" class="py-20 bg-black/30 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Os problemas que travam seu crescimento</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-brand-green to-brand-blue mx-auto mt-6"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover" data-aos="fade-up">
+          <i data-lucide="calendar" class="text-brand-blue mb-3"></i>
+          <p class="font-semibold">Posta todo dia e não vende</p>
+          <p class="text-white/70 text-sm mt-2">Conteúdo sem estratégia não vira resultado previsível.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover" data-aos="fade-up" data-aos-delay="100">
+          <i data-lucide="coins" class="text-brand-green mb-3"></i>
+          <p class="font-semibold">Anúncios que só gastam dinheiro</p>
+          <p class="text-white/70 text-sm mt-2">Segmentação e copy mal ajustadas queimam orçamento.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover" data-aos="fade-up" data-aos-delay="200">
+          <i data-lucide="users" class="text-brand-blue mb-3"></i>
+          <p class="font-semibold">Falta de clientes previsíveis</p>
+          <p class="text-white/70 text-sm mt-2">Sem funil claro, não há fluxo constante de leads.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover" data-aos="fade-up" data-aos-delay="300">
+          <i data-lucide="bar-chart-3" class="text-brand-green mb-3"></i>
+          <p class="font-semibold">Dificuldade em escalar as vendas</p>
+          <p class="text-white/70 text-sm mt-2">Escala exige dados, testes e otimização contínua.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solucao" class="py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <span class="text-xs tracking-widest text-brand-green font-bold uppercase">Solução</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold mt-2">Campanhas focadas em conversão e clientes reais</h2>
+        <p class="text-white/80 text-lg mt-6">Eu crio e gerencio campanhas de tráfego pago focadas em conversão e geração de clientes reais.</p>
+        <div class="mt-8 space-y-4">
+          <div class="flex items-start gap-3">
+            <i data-lucide="cpu" class="text-brand-blue"></i>
+            <div>
+              <p class="font-semibold">Estratégia orientada a dados</p>
+              <p class="text-white/70 text-sm">Métricas claras e decisões baseadas em resultados.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <i data-lucide="activity" class="text-brand-green"></i>
+            <div>
+              <p class="font-semibold">Foco em ROI e previsibilidade</p>
+              <p class="text-white/70 text-sm">Funil estruturado para fluxo contínuo de leads.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <i data-lucide="refresh-ccw" class="text-brand-blue"></i>
+            <div>
+              <p class="font-semibold">Otimizações constantes</p>
+              <p class="text-white/70 text-sm">Testes A/B, criativos e públicos sempre evoluindo.</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/YOURNUMBER" class="mt-10 inline-flex items-center gap-3 bg-brand-blue text-black font-bold px-6 py-3 rounded-full glow">
+          <i data-lucide="message-square"></i>
+          <span>Quero mais clientes</span>
+        </a>
+      </div>
+      <div data-aos="fade-left">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="p-5 rounded-xl bg-black/30 border border-white/10">
+              <p class="text-sm text-white/60">CPA</p>
+              <p class="text-2xl font-bold text-brand-green">-28%</p>
+            </div>
+            <div class="p-5 rounded-xl bg-black/30 border border-white/10">
+              <p class="text-sm text-white/60">CTR</p>
+              <p class="text-2xl font-bold text-brand-blue">+41%</p>
+            </div>
+            <div class="p-5 rounded-xl bg-black/30 border border-white/10">
+              <p class="text-sm text-white/60">Leads/mês</p>
+              <p class="text-2xl font-bold">120+</p>
+            </div>
+            <div class="p-5 rounded-xl bg-black/30 border border-white/10">
+              <p class="text-sm text-white/60">Escala</p>
+              <p class="text-2xl font-bold">Sustentável</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios" class="py-20 bg-black/30 border-y border-white/10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Benefícios que geram resultado</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover" data-aos="fade-up">
+          <i data-lucide="target" class="text-brand-green mb-3"></i>
+          <p class="font-semibold">Mais leads qualificados</p>
+          <p class="text-white/70 text-sm mt-2">Atração de público com intenção real de compra.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover" data-aos="fade-up" data-aos-delay="100">
+          <i data-lucide="settings" class="text-brand-blue mb-3"></i>
+          <p class="font-semibold">Estratégia personalizada</p>
+          <p class="text-white/70 text-sm mt-2">Plano sob medida para seu nicho e oferta.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover" data-aos="fade-up" data-aos-delay="200">
+          <i data-lucide="mouse-pointer-click" class="text-brand-green mb-3"></i>
+          <p class="font-semibold">Anúncios otimizados</p>
+          <p class="text-white/70 text-sm mt-2">Criativos e copies focados em conversão.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover" data-aos="fade-up" data-aos-delay="300">
+          <i data-lucide="repeat" class="text-brand-blue mb-3"></i>
+          <p class="font-semibold">Acompanhamento constante</p>
+          <p class="text-white/70 text-sm mt-2">Ajustes frequentes para maximizar o ROI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Estratégias baseadas em marketing digital e funis de conversão</h2>
+        <p class="text-white/80 mt-6">Especialista em tráfego pago, funis de vendas e geração de leads previsíveis.</p>
+        <div class="mt-8 grid grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+            <p class="text-xs text-white/60">Gestão de Ads</p>
+            <p class="font-bold text-brand-blue">Pro</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+            <p class="text-xs text-white/60">Funis</p>
+            <p class="font-bold text-brand-green">Avançado</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+            <p class="text-xs text-white/60">Leads</p>
+            <p class="font-bold">Previsíveis</p>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <div class="rounded-3xl border border-white/10 bg-black/30 p-8">
+          <div class="flex items-center gap-6">
+            <i data-lucide="shield-check" class="text-brand-green w-8 h-8"></i>
+            <p class="text-white/80">Processos sólidos, foco em métricas e segurança no investimento.</p>
+          </div>
+          <div class="mt-6 flex items-center gap-6">
+            <i data-lucide="trophy" class="text-brand-blue w-8 h-8"></i>
+            <p class="text-white/80">Metas claras e performance consistente mês a mês.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="para-quem" class="py-20 bg-black/30 border-y border-white/10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Para quem é esse serviço?</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover text-center" data-aos="fade-up">
+          <i data-lucide="brain" class="text-brand-blue mx-auto mb-3"></i>
+          <p class="font-semibold">Infoprodutores</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover text-center" data-aos="fade-up" data-aos-delay="100">
+          <i data-lucide="stethoscope" class="text-brand-green mx-auto mb-3"></i>
+          <p class="font-semibold">Clínicas</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover text-center" data-aos="fade-up" data-aos-delay="200">
+          <i data-lucide="store" class="text-brand-blue mx-auto mb-3"></i>
+          <p class="font-semibold">Negócios locais</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 card-hover text-center" data-aos="fade-up" data-aos-delay="300">
+          <i data-lucide="shopping-bag" class="text-brand-green mx-auto mb-3"></i>
+          <p class="font-semibold">E-commerces iniciantes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="oferta" class="py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1 mb-4" data-aos="fade-up">
+        <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
+        <span class="text-xs tracking-wider text-white/70">Oferta para novos clientes</span>
+      </div>
+      <h2 class="text-3xl md:text-5xl font-extrabold" data-aos="fade-up">Análise estratégica gratuita para novos clientes</h2>
+      <p class="text-white/80 text-lg mt-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Solicite uma análise inicial do seu negócio e descubra como escalar suas vendas com anúncios profissionais.
+      </p>
+      <a href="https://wa.me/YOURNUMBER" class="mt-10 inline-flex items-center gap-3 bg-brand-green text-black font-bold px-8 py-4 rounded-full glow" data-aos="zoom-in">
+        <i data-lucide="message-square"></i>
+        <span>Quero minha análise gratuita</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-tr from-brand-blue/20 via-transparent to-brand-green/20 p-12 text-center" data-aos="zoom-in">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Pronto para escalar suas vendas com anúncios?</h2>
+        <a href="https://wa.me/YOURNUMBER" class="inline-flex items-center gap-3 bg-brand-blue text-black font-bold px-10 py-5 rounded-full glow">
+          <i data-lucide="zap"></i>
+          <span>Quero atrair mais clientes</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black/40 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-10">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <span class="inline-block w-6 h-6 rounded-full bg-gradient-to-tr from-brand-green to-brand-blue"></span>
+          <span class="font-bold tracking-wider">Performance Ads Pro</span>
+        </div>
+        <div class="text-xs text-white/60">
+          © 2026 Performance Ads Pro. Todos os direitos reservados.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://wa.me/YOURNUMBER" class="text-white/70 hover:text-white transition">
+            <i data-lucide="message-square"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition">
+            <i data-lucide="instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/YOURNUMBER" class="fixed bottom-6 right-6 z-50 bg-brand-green text-black font-bold px-4 py-4 rounded-full glow inline-flex items-center gap-2">
+    <i data-lucide="phone"></i>
+    <span class="hidden sm:inline">Falar no WhatsApp</span>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 100 });
+    lucide.createIcons();
+  </script>
+</body>
+</html>
